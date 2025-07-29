@@ -1,0 +1,34 @@
+# Python
+*.pyc
+__pycache__/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+env/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and results
+*.log
+results/
+
+# Model checkpoints
+*.pt
+*.pth
+checkpoints/
+
+# RL-specific outputs
+videos/
+tensorboard/
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+
+# PyCharm
+.pycharm/   
