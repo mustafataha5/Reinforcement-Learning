@@ -55,15 +55,17 @@ Navigate to `004 Dron Game/` and open the notebooks in order:
 - `003 Dron_Eval.ipynb`: Evaluate and visualize the trained agent.
 
 ### 4. View Results & Visualization
-- **Static Evaluation Plots**: View performance metrics in the `imgs/` directory, displayed below.
-- **Interactive 3D Render**: Open `drone_environment_render.html` or `drone_environment_render2.html` in a browser to explore drone movement in 3D.
+- **Static Evaluation Plots**: View performance metrics below or in the `imgs/` directory (if committed to the repository).
+- **Interactive 3D Render**: Open `drone_environment_render.html` or `drone_environment_render2.html` in a browser, or visit [GitHub Pages link] (replace with your hosted URL if available) to explore drone movement in 3D.
 
 #### 📷 Static Evaluation Plots
 Example performance of the trained drone agent:
 
-![Q-learning Evaluation 1](imgs/dron_q_learn_1_eval.png)
+![Q-learning Evaluation 1](https://drive.google.com/uc?export=view&id=1MY6cdPo4I4bCnEj1i_LuU7xPAiTXG4HF)
 ![Q-learning Evaluation 2](imgs/dron_q_learn_2_eval.png)
 ![Q-learning Evaluation 3](imgs/dron_q_learn_3_eval.png)
+
+*Note*: For `dron_q_learn_2_eval.png` and `dron_q_learn_3_eval.png`, ensure they are committed to the `imgs/` directory or replace with external URLs (e.g., Google Drive links).
 
 ## 🧪 Features
 - Custom `DroneEnvironment` with 3D grid, obstacles, and goal zones.
