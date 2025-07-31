@@ -61,7 +61,7 @@ Navigate to `004 Dron Game/` and open the notebooks in order:
 #### 📷 Static Evaluation Plots
 Example performance of the trained drone agent:
 
-![Q-learning Evaluation 1](https://drive.google.com/uc?export=view&id=1MY6cdPo4I4bCnEj1i_LuU7xPAiTXG4HF)
+<!-- ![Q-learning Evaluation 1](https://drive.google.com/uc?export=view&id=1MY6cdPo4I4bCnEj1i_LuU7xPAiTXG4HF) -->
 ![Q-learning Evaluation 2](imgs/dron_q_learn_2_eval.png)
 ![Q-learning Evaluation 3](imgs/dron_q_learn_3_eval.png)
 
