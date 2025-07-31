@@ -1,88 +1,107 @@
-# Drone Reinforcement Learning Project
+# 🚁 Drone Reinforcement Learning Project
 
-## Overview
-This project, located in the `004 Dron Game` directory, focuses on developing and training a reinforcement learning (RL) agent to navigate a drone in a custom environment. The project uses Python, Jupyter Notebooks, and reinforcement learning techniques, specifically Q-learning, to train and evaluate the drone's performance. The environment is built using the Gymnasium library, and the results are visualized through rendered HTML outputs and evaluation plots.
+## 📌 Overview
+This project, located in the `004 Dron Game/` directory, implements and trains a reinforcement learning (RL) agent to autonomously navigate a drone in a custom 3D environment. Built using [Gymnasium](https://gymnasium.farama.org/), the project employs **Q-learning** for training and **Plotly** for interactive 3D visualizations. The agent learns to reach a randomly generated or fixed goal position while avoiding buildings and prohibited zones in a 3D grid world.
 
-## Directory Structure
-- **Root Directory (`MYRL/`)**:
-  - `001 Gymnasium/`: Initial experiments with Gymnasium for environment setup.
-  - `002 Q_learning/`: Implementation of Q-learning algorithms.
-  - `003 DQN/`: Deep Q-Network (DQN) experiments.
-  - `004 Dron Game/`: Main project directory for the drone RL environment.
-  - `Test_gym/`: Testing Gymnasium environments.
-  - `imgs/`: Stores evaluation plots for the drone's performance.
-  - `README.md`: Project overview and instructions.
+## 📁 Directory Structure
+### Root: `RL/MYRL/`
+- `.gitignore`: Specifies files and directories to be ignored by Git.
+- `.ipynb_checkpoints/`: Jupyter Notebook checkpoints.
+- `001 Gymnasium/`: Experiments setting up environments with Gymnasium.
+- `002 Q_learning/`: Core Q-learning implementation.
+- `003 DQN/`: Early experiments with Deep Q-Networks (DQN).
+- `004 Dron Game/`: 🚁 **Main project: drone environment, training, and evaluation**.
+- `imgs/`: Evaluation and training result images.
+- `README.md`: This documentation file.
+- `requirements.txt`: Required Python packages.
+- `Test_gym/`: Testing Gymnasium environments.
 
-- **004 Dron Game Directory**:
-  - `001 Create_Dron_env.ipynb`: Notebook for creating the custom drone environment.
-  - `002 Drone_train.ipynb`: Notebook for training the RL agent using Q-learning.
-  - `003 Dron_Eval.ipynb`: Notebook for evaluating the trained agent's performance.
-  - `Drone_env.ipynb`: Additional notebook for environment setup and testing.
-  - `drone_environment_render.html`: Rendered visualization of the drone environment.
-  - `drone_environment_render2.html`: Alternative rendered visualization.
+### Main Project: `004 Dron Game/`
+- `001 Create_Dron_env.ipynb`: Defines and tests the custom 3D drone environment.
+- `002 Drone_train.ipynb`: Trains the RL agent using Q-learning.
+- `003 Dron_Eval.ipynb`: Evaluates the trained agent’s performance.
+- `Drone_env.ipynb`: Reusable environment module.
+- `drone_environment_render.html`: Interactive 3D visualization (Plotly).
+- `drone_environment_render2.html`: Alternate 3D visualization.
 
-- **imgs Directory**:
-  - `dron_q_learn_1_eval.png`: Evaluation plot 1 for Q-learning performance.
-  - `dron_q_learn_2_eval.png`: Evaluation plot 2 for Q-learning performance.
-  - `dron_q_learn_3_eval.png`: Evaluation plot 3 for Q-learning performance.
+### Images: `imgs/`
+- `dron_q_learn_1_eval.png`: Evaluation plot 1 for Q-learning performance.
+- `dron_q_learn_2_eval.png`: Evaluation plot 2 for Q-learning performance.
+- `dron_q_learn_3_eval.png`: Evaluation plot 3 for Q-learning performance.
 
-## Project Goals
-- Create a custom Gymnasium-based environment for a drone.
-- Train an RL agent using Q-learning to navigate the environment.
-- Evaluate the agent's performance and visualize results using plots and rendered HTML outputs.
+## 🎯 Project Goals
+- ✅ Build a realistic 3D navigation environment for a drone.
+- ✅ Implement Q-learning for pathfinding in 3D space.
+- ✅ Visualize results with static plots and interactive 3D renders.
 
-## Prerequisites
-To run this project, ensure you have the following installed:
-- Python 3.8+
-- Jupyter Notebook
-- Required Python libraries:
-  - `gymnasium`
-  - `numpy`
-  - `matplotlib`
-  - `pandas`
-  - Any additional dependencies listed in the notebooks
-
-Install dependencies using:
+## 🚀 Getting Started
+### 1. Clone the Repository
 ```bash
-pip install gymnasium numpy matplotlib pandas
+git clone https://github.com/mustafataha5/your-repo.git
+cd your-repo/RL/MYRL
 ```
 
-## Getting Started
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo/RL/MYRL/004\ Dron\ Game
-   ```
+### 2. Set Up the Environment
+```bash
+python -m venv drone_env
+source drone_env/bin/activate  # On Windows: drone_env\Scripts\activate
+pip install -r requirements.txt
+```
 
-2. **Run the Notebooks**:
-   - Start with `001 Create_Dron_env.ipynb` to set up the drone environment.
-   - Proceed to `002 Drone_train.ipynb` to train the RL agent.
-   - Use `003 Dron_Eval.ipynb` to evaluate the agent's performance.
-   - Optionally, explore `Drone_env.ipynb` for additional environment testing.
+### 3. Run the Notebooks
+Navigate to `004 Dron Game/` and open the notebooks in order:
+- `001 Create_Dron_env.ipynb`: Define the 3D environment.
+- `002 Drone_train.ipynb`: Train the agent with Q-learning.
+- `003 Dron_Eval.ipynb`: Evaluate and visualize the trained agent.
 
-3. **View Visualizations**:
-   - Open `drone_environment_render.html` or `drone_environment_render2.html` in a web browser to view the rendered drone environment.
-   - Check the `imgs/` directory for evaluation plots (`dron_q_learn_1_eval.png`, etc.).
+### 4. View Results & Visualization
+- **Static Evaluation Plots**: View performance metrics in the `imgs/` directory, displayed below.
+- **Interactive 3D Render**: Open `drone_environment_render.html` or `drone_environment_render2.html` in a browser to explore drone movement in 3D.
 
-## Usage
-- **Environment Creation**: The `001 Create_Dron_env.ipynb` notebook defines the custom drone environment using Gymnasium, including state space, action space, and reward structure.
-- **Training**: The `002 Drone_train.ipynb` notebook implements Q-learning to train the drone agent to navigate the environment.
-- **Evaluation**: The `003 Dron_Eval.ipynb` notebook evaluates the trained agent and generates performance metrics, visualized in the `imgs/` directory.
-- **Visualization**: The rendered HTML files (`drone_environment_render.html` and `drone_environment_render2.html`) provide interactive visualizations of the drone's behavior.
+#### 📷 Static Evaluation Plots
+Example performance of the trained drone agent:
 
-## Results
-The evaluation plots in the `imgs/` directory (`dron_q_learn_1_eval.png`, `dron_q_learn_2_eval.png`, `dron_q_learn_3_eval.png`) show the agent's performance metrics, such as cumulative rewards and episode lengths, over multiple evaluation runs.
+![Q-learning Evaluation 1](imgs/dron_q_learn_1_eval.png)
+![Q-learning Evaluation 2](imgs/dron_q_learn_2_eval.png)
+![Q-learning Evaluation 3](imgs/dron_q_learn_3_eval.png)
 
-## Contributing
-Contributions are welcome! Please follow these steps:
+## 🧪 Features
+- Custom `DroneEnvironment` with 3D grid, obstacles, and goal zones.
+- Tabular Q-learning agent for navigation.
+- Gymnasium-compatible training and evaluation pipeline.
+- Interactive 3D visualizations using Plotly.
+- Reward shaping, early termination, and collision detection.
+
+## ⚙️ Dependencies
+Install dependencies from `requirements.txt`:
+```bash
+pip install -r requirements.txt
+```
+Key packages include:
+```bash
+pip install gymnasium numpy plotly jupyter
+```
+
+## 🧩 Contributing
+Contributions are welcome! To contribute:
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit (`git commit -m "Add feature"`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a pull request.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Make changes and commit: `git commit -m "Add new feature"`.
+4. Push to the branch: `git push origin feature-name`.
+5. Submit a pull request.
 
-## License
+## 📜 License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
-For questions or suggestions, please open an issue on GitHub or contact [your-email@example.com].
+## 📬 Contact
+Created by Mustafa Taha  
+📧 Email: mustafa.taha.mu95@gmail.com  
+📍 Location: Ramallah, Palestine  
+💼 GitHub: [mustafataha5](https://github.com/mustafataha5)
+
+## ⭐ Acknowledgments
+- [Gymnasium](https://gymnasium.farama.org/) for environment interfaces.
+- [Plotly](https://plotly.com/) for 3D visualizations.
+- Reinforcement Learning community and tutorials.
+
+> *“Teach the drone to learn, and it will fly to its goal forever.”*
