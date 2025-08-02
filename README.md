@@ -65,7 +65,7 @@ Example performance of the trained drone agent:
 ![Q-learning Evaluation 2](imgs/dron_q_learn_2_eval.png)
 ![Q-learning Evaluation 3](imgs/dron_q_learn_3_eval.png)
 
-*Note*: For `dron_q_learn_2_eval.png` and `dron_q_learn_3_eval.png`, ensure they are committed to the `imgs/` directory or replace with external URLs (e.g., Google Drive links).
+<!-- *Note*: For `dron_q_learn_2_eval.png` and `dron_q_learn_3_eval.png`, ensure they are committed to the `imgs/` directory or replace with external URLs (e.g., Google Drive links). -->
 
 ## 🧪 Features
 - Custom `DroneEnvironment` with 3D grid, obstacles, and goal zones.

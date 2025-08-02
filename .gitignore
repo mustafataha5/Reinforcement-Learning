@@ -32,3 +32,6 @@ tensorboard/
 
 # PyCharm
 .pycharm/   
+
+*.mp4
+*.zip 
